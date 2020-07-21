@@ -1,4 +1,4 @@
-[![npm](https://img.shields.io/npm/v/@flitz/swagger.svg)](https://www.npmjs.com/package/@flitz/swagger) [![supported flitz version](https://img.shields.io/static/v1?label=flitz&message=0.9.2%2B&color=blue)](https://github.com/flitz-js/flitz) [![last build](https://img.shields.io/github/workflow/status/flitz-js/body/Publish)](https://github.com/flitz-js/swagger/actions?query=workflow%3APublish) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/flitz-js/swagger/pulls)
+[![npm](https://img.shields.io/npm/v/@flitz/swagger.svg)](https://www.npmjs.com/package/@flitz/swagger) [![supported flitz version](https://img.shields.io/static/v1?label=flitz&message=0.9.2%2B&color=blue)](https://github.com/flitz-js/flitz) [![last build](https://img.shields.io/github/workflow/status/flitz-js/swagger/Publish)](https://github.com/flitz-js/swagger/actions?query=workflow%3APublish) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/flitz-js/swagger/pulls)
 
 # @flitz/swagger
 
