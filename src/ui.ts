@@ -150,10 +150,10 @@ export function swagger(app: Flitz, options: SwaggerOptions): void {
 
   // swagger-ui-init.js
   {
-    const initOptions = {
+    const initOptions: any = {
       swaggerDoc: options.document || undefined,
       customOptions: options.uiOptions || {},
-      swaggerUrl: basePath + '/json',
+      swaggerUrl: basePath + '/json'
     };
 
     // build JavaScript
