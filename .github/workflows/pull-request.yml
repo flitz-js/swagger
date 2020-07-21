@@ -1,10 +1,9 @@
-name: Publish
+name: Check pull requests
 on:
-  push:
-    branches:
-      - master
+  pull_request:
+    types: ["opened", "edited", "reopened", "synchronize"]
 jobs:
-  build-and-publish:
+  check-pr:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -20,7 +19,3 @@ jobs:
         run: npm run lint
       - name: Build code
         run: npm run build
-      - name: Publish to NPM
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
