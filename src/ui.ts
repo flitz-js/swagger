@@ -134,8 +134,7 @@ export function swagger(app: Flitz, options: SwaggerOptions): void {
   // index.html
   {
     // build HTML
-    let html = indexHtml;
-    html = html.replace('<% title %>', title)
+    const html = indexHtml.replace('<% title %>', title)
       .replace('<% favIconString %>', favIcon ? '<link rel="icon" href="' + favIcon + '" />' : defaultFavIcon)
       .replace('<% customJsUrl %>', jsUrl ? `<script src="${jsUrl}"></script>` : '')
       .replace('<% customCssUrl %>', cssUrl ? `<link href="${cssUrl}" rel="stylesheet">` : '')
@@ -151,18 +150,12 @@ export function swagger(app: Flitz, options: SwaggerOptions): void {
 
   // swagger-ui-init.js
   {
-    const initOptions: any = {
+    // build JavaScript
+    const js = swaggerUiInit.replace('<% swaggerOptions %>', `var options = ${JSON.stringify({
       swaggerDoc: options.document || undefined,
       customOptions: options.uiOptions || {},
       swaggerUrl: basePath + '/json'
-    };
-
-    // build JavaScript
-    let js = swaggerUiInit;
-    js = js.replace(
-      '<% swaggerOptions %>',
-      `var options = ${JSON.stringify(initOptions)}`
-    );
+    })}`);
 
     app.get(basePath + '/swagger-ui-init.js', async (req, res) => {
       res.setHeader('Content-Type', 'application/javascript');
