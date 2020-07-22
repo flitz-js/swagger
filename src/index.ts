@@ -24,4 +24,6 @@ exports = module.exports = function () {
   return swagger.apply(null, arguments as any);
 };
 
+export * from './ui';
+
 export default swagger;
