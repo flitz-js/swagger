@@ -103,6 +103,13 @@ run();
 
 TypeScript is optionally supported. The module contains its own [definition files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).
 
+## Credits
+
+The module makes use of:
+
+* [js-yaml](https://github.com/nodeca/js-yaml) by [Nodeca](https://github.com/nodeca)
+* [swagger-ui-dist](https://github.com/swagger-api/swagger-ui) by [Swagger](https://github.com/swagger-api)
+
 ## License
 
 MIT © [Marcel Kloubert](https://github.com/mkloubert)

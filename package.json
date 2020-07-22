@@ -1,6 +1,6 @@
 {
   "name": "@flitz/swagger",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Sets up a flitz instance serving a Swagger UI.",
   "private": false,
   "main": "lib/index.js",
