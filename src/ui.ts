@@ -143,6 +143,7 @@ export function swagger(app: Flitz, options: SwaggerOptions): void {
       .replace('<% customJs %>', customJs ? `<script> ${customJs} </script>` : '')
 
     app.get(isIndexHtml(basePath), async (req, res) => {
+      res.setHeader('Content-Type', 'text/html');
       res.write(html);
       res.end();
     });
@@ -164,7 +165,7 @@ export function swagger(app: Flitz, options: SwaggerOptions): void {
     );
 
     app.get(basePath + '/swagger-ui-init.js', async (req, res) => {
-      res.setHeader('Content-type', 'application/javascript');
+      res.setHeader('Content-Type', 'application/javascript');
       res.write(js);
       res.end();
     });
@@ -175,7 +176,7 @@ export function swagger(app: Flitz, options: SwaggerOptions): void {
     const jsonDoc = JSON.stringify(options.document, null, 2);
 
     app.get(basePath + '/json', async (req, res) => {
-      res.setHeader('Content-type', 'application/json');
+      res.setHeader('Content-Type', 'application/json');
       res.setHeader('Content-Disposition', `attachment; filename="${downloadName}.json`);
 
       res.write(jsonDoc);
@@ -188,7 +189,7 @@ export function swagger(app: Flitz, options: SwaggerOptions): void {
     const yamlDoc = dumpYaml(options.document);
 
     app.get(basePath + '/yaml', async (req, res) => {
-      res.setHeader('Content-type', 'application/x-yaml');
+      res.setHeader('Content-Type', 'application/x-yaml');
       res.setHeader('Content-Disposition', `attachment; filename="${downloadName}.yaml`);
 
       res.write(yamlDoc);

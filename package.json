@@ -1,6 +1,6 @@
 {
   "name": "@flitz/swagger",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Sets up a flitz instance serving a Swagger UI.",
   "private": false,
   "main": "lib/index.js",
@@ -60,6 +60,6 @@
     "@types/js-yaml": "^3.12.5",
     "@types/swagger-ui-dist": "^3.0.5",
     "js-yaml": "^3.14.0",
-    "swagger-ui-dist": "^3.30.0"
+    "swagger-ui-dist": "^3.30.1"
   }
 }
